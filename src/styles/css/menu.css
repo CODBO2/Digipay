@@ -1,0 +1,77 @@
+.menu-header > div {
+  height: auto;
+  width: fit-content;
+  display: flex;
+  column-gap: 3vw;
+}
+.menu-header > div a {
+  font-size: 16px;
+  font-family: inter;
+  font-weight: 400;
+  color: #616161;
+  text-decoration: none;
+  position: relative;
+  transition-duration: 0.3s;
+}
+.menu-header > div .active-link {
+  color: #4ECA04 !important;
+}
+.menu-header > div .active-link::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: block;
+  top: -15px;
+  left: calc(50% - 7.5px);
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../assets/icons/location-icon.svg);
+}
+
+.menu-header > button {
+  display: none;
+}
+
+@media (width <= 800px) {
+  .menu-header {
+    position: relative;
+  }
+  .menu-header button {
+    border: none;
+    display: block;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icons/menu-icon.svg);
+  }
+  .menu-header .change-icon-button {
+    background-image: url(../../assets/icons/close-icon.svg);
+  }
+  .menu-header div {
+    display: none;
+    top: 70px;
+    right: 0px;
+    position: absolute;
+    padding: 30px 20px;
+    border-radius: 5px;
+    row-gap: 15px;
+    flex-direction: column;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 69, 172, 0.8);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .menu-header div a {
+    color: white;
+  }
+  .menu-header .active-link::before {
+    display: none !important;
+  }
+  .menu-header .menu-open {
+    display: flex !important;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

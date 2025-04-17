@@ -1,0 +1,17 @@
+---
+// Componentes
+import Image from "astro/components/Image.astro"
+
+// Propiedades
+const { legend, icon, background } = Astro.props
+
+// Estilos
+import "../styles/css/contact-card.css"
+---
+
+<figure class = "contact-card" style = { background }>
+    <Image class = "contact-image" src = { icon } alt = "Ícono de red social."/>
+    <figcaption>
+        { legend }
+    </figcaption>
+</figure>

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "inter";
+  src: url("../../assets/fonts/inter-regular.ttf");
+}
+/* Variables globales. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 0px 6vw;
+  min-height: calc(100vh - 90px);
+  padding-top: 90px;
+}
+
+/*# sourceMappingURL=section.css.map */

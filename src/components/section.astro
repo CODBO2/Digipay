@@ -1,0 +1,35 @@
+---
+// Estilos propios.
+import "../styles/css/section.css"
+
+// Propiedades.
+const { id } = Astro.props
+---
+
+<section class = "section" id = { id }>
+    <slot/>
+</section>
+
+<script>
+    // Cada sección debe tener una clase "section" para el funcionamiento de este script.
+    const sections = document.querySelectorAll( ".section" )
+
+    function callback( sections: IntersectionObserverEntry[] ) {
+        sections.forEach( ( section ) => {
+            const sectionId = section.target.id
+            const link = document.getElementById( `link-to-${ sectionId }` )
+
+            if( section.isIntersecting ) link?.classList.add( "active-link" )
+            else link?.classList.remove( "active-link" )
+        } )
+    }
+
+    // Cuánto de un elemento html debe estar en pantalla para ser considerado visible.
+    const options: IntersectionObserverInit = {
+        threshold: window.innerWidth <= 800 ? 0.30 : 0.50
+    }
+
+    const observer = new IntersectionObserver( callback , options )
+
+    sections.forEach( section => observer.observe( section ) )
+</script>

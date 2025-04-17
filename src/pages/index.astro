@@ -1,0 +1,35 @@
+---
+// Componentes
+import Header from "../components/header.astro"
+
+// Secciones
+import Inicio from "../sections/inicio.astro"
+import Reseñas from "../sections/reseñas.astro"
+import Clientes from "../sections/clientes.astro"
+import Contacto from "../sections/contacto.astro"
+import Transacciones from "../sections/transacciones.astro"
+
+// Estilos
+import "../styles/css/global.css"
+
+// Activos
+import Symbol from "../assets/icons/symbol-digipay.ico"
+---
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digipay</title>
+        <link rel="icon" href = { Symbol } type="image/png">
+    </head>
+    <body>
+        <Header/>
+        <Inicio/>
+        <Transacciones/>
+        <Clientes/>
+        <Reseñas/>
+        <Contacto/>
+    </body>
+</html>

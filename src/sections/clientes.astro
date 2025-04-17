@@ -1,0 +1,28 @@
+---
+// Secciones
+import Section from "../components/section.astro"
+
+// Componentes
+import Image from "astro/components/Image.astro"
+
+// Estilos
+import "../styles/css/clientes.css"
+
+// Activos
+import client_image from "../assets/images/client-section-image.svg"
+---
+
+<Section id = "clientes">
+    <article class = "section-3-wrapper">
+        <h4>¡Elegidos por las <span>marcas más grandes</span> y reconocidas a nivel internacional!</h4>
+        <div class = "content-wrapper">
+            <div>
+                <h2>Elegido por todos</h2>
+                <p>
+                    Porque cuando se trata de <span>proteger y resguardar</span> las transacciones de tus usuarios, ninguno se iguala a <span>Digipay</span>
+                </p>
+            </div>
+            <Image src = { client_image } alt = "Cliente imagen"/>
+        </div>
+    </article>
+</Section>

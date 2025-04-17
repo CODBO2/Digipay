@@ -1,0 +1,16 @@
+---
+// Activos.
+import digipay_logo from "../assets/images/digipay-medium-logo.png"
+
+// Componentes.
+import Menu from "./menu.astro"
+import Image from "astro/components/Image.astro"
+
+// Estilos propios.
+import "../styles/css/header.css"
+---
+
+<header>
+    <Image class = "header-logo" src = { digipay_logo } alt = "logo"/>
+    <Menu/>
+</header>

@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "inter";
+  src: url("../../assets/fonts/inter-regular.ttf");
+}
+/* Variables globales. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-1-wrapper {
+  max-width: 100%;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+}
+.section-1-wrapper article {
+  width: 50%;
+  height: auto;
+}
+.section-1-wrapper article h1 {
+  font-size: 52px;
+  font-weight: bold;
+  font-family: inter;
+  background: linear-gradient(to right, #346ccd, #6dc0f3);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 15px;
+}
+.section-1-wrapper article p {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 60px;
+  font-family: inter;
+  color: #282828;
+  margin-bottom: 30px;
+}
+.section-1-wrapper article button {
+  width: 280px;
+  height: 80px;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: inter;
+  border: none;
+  background-image: linear-gradient(to right, #0087E1, #0045AC);
+  margin-bottom: 30px;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.271);
+  transition-duration: 0.3s;
+}
+.section-1-wrapper article button:hover {
+  background-image: linear-gradient(to right, #018dea, #004bbc);
+}
+.section-1-wrapper article small {
+  display: block;
+  font-size: 20px;
+  font-family: inter;
+  color: #282828;
+}
+.section-1-wrapper img {
+  width: 50%;
+  height: auto;
+}
+
+@media (width <= 900px) {
+  .section-1-wrapper {
+    row-gap: 30px;
+    padding-top: 30px;
+    flex-direction: column;
+  }
+  .section-1-wrapper article > h1 {
+    font-size: 40px;
+  }
+  .section-1-wrapper article > p {
+    font-size: 28px;
+    line-height: 50px;
+  }
+  .section-1-wrapper article > small {
+    font-size: 16px;
+  }
+  .section-1-wrapper article {
+    width: 100%;
+  }
+  .section-1-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=inicio.css.map */

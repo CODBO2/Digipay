@@ -1,0 +1,23 @@
+---
+// Componentes
+import Image from "astro/components/Image.astro";
+
+// Activos
+import visa_logo from "../assets/images/visa-logo.png"
+import user_profile_image from "../assets/images/user-profile-image.jpg"
+
+// Estilos
+import "../styles/css/reseña.css"
+---
+
+<figure class = "reseña">
+    <Image class = "autor-image" src = { user_profile_image } alt = "Autor de la reseña."/>
+    <figcaption>
+        <h4>Marco Aurelio</h4>
+        <p>Emperador de Roma y filósofo</p>
+        <p>
+            La primera regla es mantener un espíritu tranquilo. El segundo es mirar las cosas a la cara y conocerlas por lo que son.
+        </p>
+        <Image class = "autor-logo-image" src = { visa_logo } alt = "Logo del autor de la reseña." />
+    </figcaption>
+</figure>

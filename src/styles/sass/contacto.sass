@@ -1,0 +1,53 @@
+@use "global"
+    
+.section-5-wrapper
+    width: 100%
+    min-height: global.$section-height
+
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+
+    h4
+        font:
+            size: 20px
+            weight: 400
+            family: inter
+
+        color: global.$font-color
+
+        margin-bottom: 90px
+
+        span
+            font-weight: 600
+            color: global.$font-color-focused
+
+    div
+        gap: 50px
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 100px
+        justify-content: center
+
+    small
+        display: flex
+        column-gap: 20px
+        align-items: center
+
+        color: #656565
+        font:
+            size: 18px
+            family: inter  
+
+        hr
+            width: 50px
+            height: 1px
+
+@media ( width <= 800px )
+    .section-5-wrapper
+        margin-bottom: 50px
+
+        h4
+            margin-bottom: 35px

@@ -1,0 +1,93 @@
+// Estilo global.
+@use "global"
+
+.section-1-wrapper
+    max-width: 100%
+    min-height: global.$section-height
+
+    display: flex
+    align-items: center
+
+    article
+        width: 50%
+        height: auto
+
+        h1
+            font-size: 52px
+            font-weight: bold
+            font-family: inter
+
+            background: linear-gradient(to right ,#346ccd, #6dc0f3)
+            -webkit-background-clip: text
+            color: transparent
+
+            margin-bottom: 15px
+
+        p
+            font-size: 36px
+            font-weight: 600
+            line-height: 60px
+            font-family: inter
+            color: global.$font-color
+
+            margin-bottom: 30px
+
+        button
+            width: 280px
+            height: 80px
+
+            border-radius: 10px
+
+            color: white
+
+            font-size: 24px
+            font-weight: 500
+            font-family: inter
+
+            border: none
+            background-image: linear-gradient(to right, #0087E1, #0045AC)
+
+            margin-bottom: 30px
+
+            cursor: pointer
+
+            box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.271)
+
+            transition-duration: .3s
+
+            &:hover
+                background-image: linear-gradient(to right, #018dea, #004bbc)
+
+        small
+            display: block
+            font-size: 20px
+            font-family: inter
+            color: global.$font-color
+
+    img
+        width: 50%
+        height: auto
+
+// Estilos aplicables a anchos de pantalla inferiores o iguales a 900px
+@media ( width <= 900px )
+    .section-1-wrapper
+        row-gap: 30px
+        padding-top: 30px
+        flex-direction: column
+
+        article > h1
+            font-size: 40px
+
+        article > p
+            font-size: 28px
+            line-height: 50px
+
+        article > small
+            font-size: 16px
+
+        article
+            width: 100%
+
+        img
+            width: 100%
+            height: auto

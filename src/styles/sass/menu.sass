@@ -1,0 +1,91 @@
+.menu-header > div
+    height: auto
+    width: fit-content
+
+    display: flex
+    column-gap: 3vw
+    
+    a
+        font:
+            size: 16px
+            family: inter
+            weight: 400 // Normal
+        color: #616161
+        text-decoration: none
+
+        position: relative // Para contener el elemento ::before.
+        transition-duration: .3s
+
+    // Estilo aplicado al link cuando su sección asociada es visible en pantalla.
+    .active-link
+
+        color: #4ECA04 !important
+
+        &::before
+            content: ""
+            width: 15px
+            height: 15px
+            display: block
+
+            top: -15px
+            left: calc( 50% - 15px/2 )
+            position: absolute
+
+            background-size: cover
+            background-position: center
+            background-image: url( ../../assets/icons/location-icon.svg )
+
+.menu-header > button
+    display: none
+
+// Estilos aplicados al menú compacto.
+@media ( width <= 800px )
+    .menu-header
+
+        position: relative
+
+        button
+            border: none
+            display: block
+            background: transparent
+
+            width: 30px
+            height: 30px
+
+            background-size: cover
+            background-repeat: no-repeat
+            background-image: url( ../../assets/icons/menu-icon.svg )
+
+        .change-icon-button
+            background-image: url( ../../assets/icons/close-icon.svg )
+
+        div
+            // Por defecto, el menú se encuentra oculto.
+            display: none
+
+            top: 70px
+            right: 0px
+            position: absolute
+
+            padding: 30px 20px
+            border-radius: 5px
+
+            row-gap: 15px
+            flex-direction: column
+
+            backdrop-filter: blur( 3px )
+            background-color: rgba( 0, 69, 172, 0.80 )
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+
+            a
+                color: white
+
+        .active-link::before
+            display: none !important
+
+        .menu-open
+            display: flex !important
+
+    
+
+

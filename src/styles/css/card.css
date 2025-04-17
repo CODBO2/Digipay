@@ -1,0 +1,52 @@
+.card {
+  flex-grow: 1;
+  height: 400px;
+  max-width: 370px;
+  min-width: 200px;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: white;
+  border: thin solid #F2F2F2;
+  box-shadow: 4px 48px 50px 0px rgba(113, 110, 156, 0.25);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .card-image {
+  width: 170px;
+  height: 170px;
+}
+.card figcaption {
+  width: 100%;
+  height: fit-content;
+  font-family: inter;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.card figcaption p:nth-of-type(1) {
+  color: #284065;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card figcaption p:nth-of-type(2) {
+  color: #616161;
+  font-size: 16px;
+  font-weight: 300;
+}
+.card figcaption hr {
+  width: 100%;
+  margin: 25px 0px;
+  border: thin solid #F2F2F2;
+}
+.card figcaption p:nth-of-type(3) {
+  font-size: 24px;
+  font-weight: 600;
+  background: linear-gradient(to right, #73985E, #33A3E8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*# sourceMappingURL=card.css.map */

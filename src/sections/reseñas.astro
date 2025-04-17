@@ -1,0 +1,29 @@
+---
+// Secciones.
+import Section from "../components/section.astro";
+
+// Componentes
+import Reseña from "../components/reseña.astro";
+import Image from "astro/components/Image.astro";
+
+// Activos
+import arrow_icon from "../assets/icons/arrow-icon.svg"
+
+// Estilos
+import "../styles/css/reseñas.css"
+---
+
+<Section id = "reseñas">
+    <article class = "section-4-wrapper">
+        <h4>¡Únete a nostros y <span>comparte tu experiencia</span> con los demás!</h4>
+        <div class = "review-container">
+            <Reseña/>
+            <Reseña/>
+            <Reseña/>
+        </div>
+        <a href="#">
+            <span>Ver más</span>
+            <Image src = { arrow_icon } alt = "Flecha de ver más."/>
+        </a>
+    </article>
+</Section>

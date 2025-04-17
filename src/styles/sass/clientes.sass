@@ -1,0 +1,75 @@
+@use "global"
+    
+.section-3-wrapper
+    width: 100%
+    min-height: global.$section-height
+
+    display: flex
+    row-gap: 20px
+    align-items: center
+    flex-direction: column
+    justify-content: center
+
+    h4
+        font-size: 20px
+        font-weight: 500
+        font-family: inter
+        color: global.$font-color
+
+        span
+            font-weight: 600
+            color: global.$font-color-focused
+
+    .content-wrapper
+        width: 100%
+        min-height: fit-content
+
+        display: flex
+        column-gap: 40px
+        align-items: center
+
+        div
+            width: 45%
+
+            h2
+                font-size: 36px
+                font-family: inter
+                margin-bottom: 30px
+
+                background: linear-gradient(to right ,#346ccd, #6dc0f3)
+                -webkit-background-clip: text
+                color: transparent
+
+            p
+                font-size: 36px
+                font-family: inter
+                color: global.$font-color
+
+                line-height: 60px
+
+                span
+                    font-weight: bold
+                    color: global.$font-color-focused
+
+        img
+            width: 50%
+            height: auto
+
+@media ( width <= 800px )
+    .section-3-wrapper > h4
+        margin-bottom: 30px
+
+    .content-wrapper
+        flex-direction: column
+
+        div
+            margin-bottom: 25px
+            width: 100% !important
+
+            p
+                font-size: 24px !important
+                line-height: 40px !important
+
+        img
+            height: auto
+            width: 100% !important

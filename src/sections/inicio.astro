@@ -1,0 +1,28 @@
+---
+// Estilos
+import "../styles/css/inicio.css"
+
+// Assets
+import home_image from "../assets/images/home-section-image.jpg"
+
+// Componentes
+import Image from "astro/components/Image.astro";
+import Section from "../components/section.astro";
+---
+
+<Section id = "inicio">
+    <div class = "section-1-wrapper">
+        <article>
+            <h1>Puntos de venta</h1>
+            <p>
+                ¡Adquiere tu punto de venta ya! 
+                Incrementa las ganancias de tu empresa o negocio.
+            </p>
+            <button>
+                Acción principal
+            </button>
+            <small>¡No esperes más, adquiere tu punto ya!</small>
+        </article>
+        <Image src = { home_image } alt = "Punto móvil.">
+    </div>
+</Section>

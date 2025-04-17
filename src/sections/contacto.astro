@@ -1,0 +1,47 @@
+---
+// Componentes
+import Section from "../components/section.astro";
+import ContactCard from "../components/contact-card.astro";
+
+// Estilos
+import "../styles/css/contacto.css"
+
+// Activos
+import gmail_icon from "../assets/icons/gmail-icon.svg"
+import linkdin_icon from "../assets/icons/linkdin-icon.svg"
+import whatsapp_icon from "../assets/icons/whatsapp-icon.svg"
+import instagram_icon from "../assets/icons/instagram-icon.svg"
+---
+z
+<Section id = "contacto">
+    <div class = "section-5-wrapper">
+        <h4><span>Contáctanos</span> a través de nuestras redes, correo o número telefónico.</h4>
+        <div>
+            <ContactCard 
+                legend = "Whatsapp" 
+                icon = { whatsapp_icon } 
+                background = `background-image: linear-gradient(to top right, #25D366, #54F28F)`
+            />
+            <ContactCard 
+                legend = "Instagram" 
+                icon = { instagram_icon } 
+                background = `background-image: linear-gradient(to top right, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5)`
+            />
+            <ContactCard 
+                legend = "Linkdin" 
+                icon = { linkdin_icon } 
+                background = `background-image: linear-gradient(to top right, #0A66C2, #4091E2)`
+            />
+            <ContactCard 
+                legend = "Correo" 
+                icon = { gmail_icon } 
+                background = `background-image: linear-gradient(to top right, #EA4335, #FF7468)`
+            />
+        </div>
+        <small>
+            <hr>
+            <span>Te esperamos</span>
+            <hr>
+        </small>
+    </div>
+</Section>

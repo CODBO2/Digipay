@@ -1,0 +1,59 @@
+---
+// Componentes
+import Card from "../components/card.astro";
+import Section from "../components/section.astro";
+
+// Estilos
+import "../styles/css/transacciones.css"
+
+// Activos
+import transaction_icon_1 from "../assets/images/transaction-icon-1.svg"
+import transaction_icon_2 from "../assets/images/transaction-icon-2.jpg"
+import transaction_icon_3 from "../assets/images/transaction-icon-3.png"
+
+// Services
+import { GET } from "../services/fetch";
+
+let data = null
+
+try {
+    data = await GET()
+} catch ( error ) {
+    console.log( error )
+}
+
+---
+
+<Section id = "transacciones">
+    <article class = "section-2-wrapper">
+        <h4>
+            Soluciones de vanguardia para los pagos de <span>transacciones en la nube</span>, a través de <span>canales seguros</span> y certificados.
+        </h4>
+        <div>
+            <Card 
+                image = { transaction_icon_1 }
+                mainText = { data.numOfUsers + " Usuarios" }
+                smallText = "¡Y vamos por más!"
+                description = "Procesado por Digipay"
+            />
+            <Card 
+                image = { transaction_icon_2 }
+                mainText = { data.numOfCommerces + " Comercios" }
+                smallText = "100% seguras y certificadas"
+                description = "Transacciones hechas"
+            />
+            <Card 
+                image = { transaction_icon_3 }
+                mainText = { data.numOfDevices + " Dispositivos" }
+                smallText = "Visa, Mastercard & Europay"
+                description = "Comercios asociados"
+            />
+            <Card 
+                image = { transaction_icon_3 }
+                mainText = { data.numOfAffiliations + " Afiliaciones" }
+                smallText = "Visa, Mastercard & Europay"
+                description = "Comercios asociados"
+            />
+        </div>
+    </article>
+</Section>

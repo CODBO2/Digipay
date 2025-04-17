@@ -1,0 +1,25 @@
+---
+// Estilos
+import "../styles/css/card.css"
+
+// Componentes
+import Image from "astro/components/Image.astro"
+
+// Propiedades
+const { 
+    image,
+    mainText,
+    smallText,
+    description
+} = Astro.props
+---
+
+<figure class = "card">
+    <Image class = "card-image" src = { image } alt = "Imagen de transacción"/>   
+    <figcaption>
+        <p>{ mainText }</p>
+        <p>{ smallText }</p>
+        <hr>
+        <p>{ description }</p>
+    </figcaption>
+</figure>

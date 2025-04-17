@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "inter";
+  src: url("../../assets/fonts/inter-regular.ttf");
+}
+/* Variables globales. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-4-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-4-wrapper a {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: inter;
+  text-decoration: none;
+  color: #3366BF;
+}
+.section-4-wrapper .review-container {
+  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.section-4-wrapper h4 {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: inter;
+  color: #282828;
+  margin-bottom: 45px;
+}
+.section-4-wrapper h4 span {
+  font-weight: 600;
+  color: #3366BF;
+}
+
+/*# sourceMappingURL=rese%C3%B1as.css.map */

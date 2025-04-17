@@ -1,0 +1,26 @@
+---
+// Estilos
+import "../styles/sass/menu.sass"
+---
+
+<menu class = "menu-header">
+    <button id = "toggle-modal-button">
+       
+    </button>
+    <div id = "dinamic-menu">
+        <a id = "link-to-inicio" href="#inicio">Inicio</a>
+        <a id = "link-to-transacciones" href="#transacciones">Transacciones</a>
+        <a id = "link-to-clientes" href="#clientes">Clientes</a>
+        <a id = "link-to-reseñas" href="#reseñas">Reseñas</a>
+        <a id = "link-to-contacto" href="#contacto">Contacto</a>
+    </div>
+</menu>
+
+<script>
+    const menu = document.getElementById( "dinamic-menu" )
+    const toggleModalButton = document.getElementById( "toggle-modal-button" )
+    toggleModalButton?.addEventListener( "click", ()=> {
+        menu?.classList.toggle( "menu-open" )
+        toggleModalButton.classList.toggle( "change-icon-button" )
+    } )
+</script>
