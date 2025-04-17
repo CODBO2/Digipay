@@ -21,7 +21,6 @@ try {
 } catch ( error ) {
     console.log( error )
 }
-
 ---
 
 <Section id = "transacciones">
@@ -32,7 +31,7 @@ try {
         <div>
             <Card 
                 image = { transaction_icon_1 }
-                mainText = { data.numOfUsers + " Usuarios" }
+                mainText = { data.numOfAffiliations + " Afiliaciones" }
                 smallText = "¡Y vamos por más!"
                 description = "Procesado por Digipay"
             />
@@ -45,12 +44,6 @@ try {
             <Card 
                 image = { transaction_icon_3 }
                 mainText = { data.numOfDevices + " Dispositivos" }
-                smallText = "Visa, Mastercard & Europay"
-                description = "Comercios asociados"
-            />
-            <Card 
-                image = { transaction_icon_3 }
-                mainText = { data.numOfAffiliations + " Afiliaciones" }
                 smallText = "Visa, Mastercard & Europay"
                 description = "Comercios asociados"
             />

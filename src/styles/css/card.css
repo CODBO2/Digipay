@@ -1,8 +1,8 @@
 .card {
   flex-grow: 1;
   height: 400px;
-  max-width: 370px;
   min-width: 200px;
+  max-width: 380px;
   padding: 25px;
   border-radius: 15px;
   background-color: white;
